@@ -8,6 +8,7 @@ const Getaways = () => {
   useEffect(() => {
     getPlaces().then(setPlaces);
   }, []);
+  
 
   return <PlaceList places={places} />;
 };
