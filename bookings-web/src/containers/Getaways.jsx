@@ -9,6 +9,7 @@ const Getaways = () => {
   useEffect(() => {
     getPlaces()
     .then(setPlaces)
+    .catch(error => console.log(error))
     .finally(() => setLoading(false));
   }, []);
 

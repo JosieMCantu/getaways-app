@@ -4,6 +4,7 @@ export const getPlaces = async () => {
     const result = await response.json();
     return result.map(
       ({
+        id,
         price_per_night,
         image_thumbnail,
         max_guests,
@@ -11,6 +12,7 @@ export const getPlaces = async () => {
         ...place
       }) => ({
         ...place,
+        id: id,
         pricePerNight: price_per_night,
         imageThumbnail: image_thumbnail,
         maxGuests: max_guests,
@@ -24,10 +26,12 @@ export const getPlaces = async () => {
 
 export const getPlaceById = async (id) => {
   const res = await fetch(`${process.env.BASE_URL}/places/${id}`);
+  
   if (res.ok) {
     const result = await res.json();
-
+    
     return {
+        id: result.id,
         name: result.name,
         image: result.image,
         description: result.description,

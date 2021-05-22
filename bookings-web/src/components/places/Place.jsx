@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import {Link} from 'react-router-dom';
 
 const Place = ({
   name,
@@ -12,24 +13,22 @@ const Place = ({
   // petFriendly,
   // pool,
   // wifi,
+  id,
 }) => {
   
   return (
-    <>
+    <><Link to={`/${id}`}>
     <h2>{name}</h2>
     <img src={image} alt={name} />
     <p>{description}</p>
     <p>{location}</p>
-    {/* <p>Night Rate: ${pricePerNight}</p>
-    <p>Max guests: {maxGuests}</p>
-    <p>{petFriendly ? 'Pet Friendly' : 'No Pets Allowed'}</p>
-    <p>{pool ? 'Has a Pool!' : null}</p>
-    <p>{wifi ? 'Free Wifi' : null}</p> */}
+    </Link>
     </>
   );
 };
 
 Place.propTypes = {
+  id: PropTypes.string.isRequired,
   name: PropTypes.string.isRequired,
   description: PropTypes.string.isRequired,
   location: PropTypes.string.isRequired,

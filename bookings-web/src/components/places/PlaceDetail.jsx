@@ -6,8 +6,8 @@ function PlaceDetail({place: {
     pool, wifi
 }}) {
     return (
-        <>
-            <img src={image} alt={name} />
+        <ul aria-label='place'>
+            <li><img src={image} alt={name} />
             Name: {name}
             Description: {description}
             Location: {location}
@@ -15,8 +15,8 @@ function PlaceDetail({place: {
             Max Guest: {maxGuests}
             Pet Friendly: {petFriendly}
             Pool: {pool}
-            wifi: {wifi}
-        </>
+            wifi: {wifi}</li>
+        </ul>
     )
 }
 

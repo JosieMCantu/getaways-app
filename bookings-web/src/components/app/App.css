@@ -15,3 +15,8 @@ img {
     width: 100px;
     height: auto;
 }
+
+a {
+    color:darkslategray;
+    text-decoration: none;
+}

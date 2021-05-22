@@ -3,17 +3,20 @@ import {useParams} from 'react-router-dom';
 import {getPlaceById} from '../services/placesApi';
 import PlaceDetail from '../components/places/PlaceDetail';
 
-function PlaceDetailContainer() {
+export const PlaceDetailContainer = () => {
+    
     const [place, setPlace] = useState();
-    const [loading, setLoading] = useState();
-
+    const [loading, setLoading] = useState(true);
     const {id} = useParams();
+    
 
-    useEffect(() =>{
+    useEffect(() => {
         getPlaceById(id)
         .then(setPlace)
         .finally(() => setLoading(false))
     }, [id]);
+
+    
 
     if(loading) {
         return <h1>Loading...</h1>
@@ -21,8 +24,7 @@ function PlaceDetailContainer() {
     return (
         <>
             <PlaceDetail place={place}/>
+            
         </>
     )
 }
-
-export default PlaceDetailContainer;
