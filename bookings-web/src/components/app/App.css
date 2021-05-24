@@ -110,11 +110,11 @@ a {
     
 }
 
-/* .footer {
-    background-color: white;
-    border-radius: ;
-} */
-/* .homepage img {
-    border-radius: 10px;
-    border: 2px solid purple;
-} */
+.register {
+    
+    height: 800px;
+}
+
+form {
+    background-color: thistle;
+}
