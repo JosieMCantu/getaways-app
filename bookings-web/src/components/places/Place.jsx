@@ -1,28 +1,28 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import styles from '../app/App.css';
 import {Link} from 'react-router-dom';
 
 const Place = ({
   name,
   description,
   location,
-  // pricePerNight,
   image,
-  // imageThumbnail,
-  // maxGuests,
-  // petFriendly,
-  // pool,
-  // wifi,
   id,
 }) => {
   
   return (
     <><Link to={`/${id}`}>
-    <h2>{name}</h2>
-    <img src={image} alt={name} />
-    <p>{description}</p>
-    <p>{location}</p>
+    <ul className={styles.mainplace} aria-label='mainplace'>
+    <li>
+      <h2>{name}</h2>
+      <img src={image} alt={name} />
+      <p>{description}</p>
+      <p>{location}</p>
+    </li>
+    </ul>
     </Link>
+    
     </>
   );
 };
