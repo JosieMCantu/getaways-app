@@ -19,7 +19,7 @@ const RegisterContainer = () => {
     const handleSubmit = async (event) => {
         event.preventDefault();
         await registerUser(userName, password, email);
-
+        window.location.href = '/';
     }
 
     return (

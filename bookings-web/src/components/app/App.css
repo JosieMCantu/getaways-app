@@ -100,8 +100,7 @@ a {
     color: black;
     font-family: 'Alex Brush', cursive;
     text-align: center;
-    background-color: #253B49;
-    
+    background-color: #253B49; 
 }
 
 .intro {
@@ -111,10 +110,35 @@ a {
 }
 
 .register {
-    
+    background-color: #253B49;
     height: 800px;
+    width: 600px;
+    display: flex;
+    justify-content: center;
+    font-family: 'Taviraj', serif;
+    font-size: 1.5rem;
+}
+.rform {
+    background-color: #253B49;
+    padding: 20px;
+}
+form {
+   background-color: #616161; 
+   border-radius: 5px;
+   padding: 5px;
+   margin: 10px;
+   width: 600px;
 }
 
-form {
-    background-color: thistle;
+input[type=text] {
+    width: 50%;
+    display: inline-block;
+    padding: 5px;
+    margin: 10px;
+    box-sizing: border-box;
+}
+.rbutton {
+    width: 50%;
+    height: 150%;
+    cursor: pointer;
 }
