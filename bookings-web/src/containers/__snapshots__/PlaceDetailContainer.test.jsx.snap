@@ -1,0 +1,27 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Getaways Container renders the place detail container to the screen 1`] = `
+<ul
+  aria-label="place"
+>
+  <li>
+    <img
+      alt="Practical Suites"
+      src="http://placeimg.com/1080/800"
+    />
+    Name: 
+    Practical Suites
+    Description: 
+    The Apollotech B340 is an affordable wireless mouse with reliable connectivity, 12 months battery life and modern design
+    Location: 
+    10546 Jaquan Rest, West Shanon, South Carolina, 35257
+    Price Per Night: 
+    530
+    Max Guest: 
+    2
+    Pet Friendly: 
+    Pool: 
+    wifi: 
+  </li>
+</ul>
+`;

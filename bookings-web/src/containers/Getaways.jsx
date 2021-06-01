@@ -1,14 +1,13 @@
-import React, { useState, useEffect } from 'react';
-import { getPlaces } from '../services/placesApi';
+import React from 'react';
 import PlaceList from '../components/places/PlaceList';
+import {useGetaways} from '../hooks/useGetaways';
 
 const Getaways = () => {
-  const [places, setPlaces] = useState([]);
+  const {places, loading} = useGetaways();
 
-  useEffect(() => {
-    getPlaces().then(setPlaces);
-  }, []);
-
+  if(loading) { 
+    return <h1>Loading...</h1>
+}
   return <PlaceList places={places} />;
 };
 
