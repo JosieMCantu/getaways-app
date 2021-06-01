@@ -8,7 +8,7 @@ const LoginContainer = () => {
     const [password, setPassword] = useState('');
     const [email, setEmail] = useState('');
 
-    const onChange = () => {
+    const onChange = async ({target}) => {
         if(target.name === 'name') setuserName(target.value);
         if(target.name === 'password') setPassword(target.value);
         if(target.name === 'email') setEmail(target.value);
